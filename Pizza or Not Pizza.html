@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Classifier</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f4f4f4;
+        }
+        h2 {
+            color: #333;
+        }
+        p {
+            color: #666;
+        }
+        form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        input[type="file"] {
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h2>Is it a Pizza?</h2>
+    <p>Upload a food image and find out if it's a pizza.</p>
+
+    <form action="/predict" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept="image/*" required>
+        <br><br>
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
